@@ -67,6 +67,15 @@ from pvp_ml.util.schedule import ConstantSchedule, Schedule, schedule
 from pvp_ml.util.server_debug_tracker import ServerDebugTracker
 from pvp_ml.util.traceback_tracker import track_tracebacks
 
+from stable_baselines3 import PPO
+from gauntlet_env import GauntletEnv
+
+env = GauntletEnv()
+
+model = PPO('MlpPolicy', env, verbose=1)
+model.learn(total_timesteps=100000)
+model.save("ppo_gauntlet")
+
 logger = logging.getLogger(__name__)
 
 

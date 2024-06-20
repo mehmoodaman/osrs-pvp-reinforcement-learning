@@ -1,0 +1,5 @@
+{
+    "python.analysis.extraPaths": [
+        "./pvp-ml/pvp_ml/env"
+    ]
+}

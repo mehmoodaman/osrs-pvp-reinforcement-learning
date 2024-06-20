@@ -1,4 +1,4 @@
-name: test
+name: osrs_rl_cg
 on: push
 jobs:
   test:
